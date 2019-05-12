@@ -176,7 +176,7 @@
          
         </figure>
         <div class="txtwrap">
-          <h4 class="heading">CLB Sao Mai</h4>
+          <h4 class="heading">CLB Ánh Sáng</h4>
           <ul class="nospace meta">
             <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
             <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
