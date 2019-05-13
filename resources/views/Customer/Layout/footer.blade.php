@@ -1,4 +1,5 @@
 <div class="wrapper row4 bgded overlay" style="background-image:url('natucam/images/demo/backgrounds/04.png');">
+<div class="bgded overlay"> 
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_third first">
@@ -35,6 +36,7 @@
   </footer>
 </div>
 <div class="wrapper row5">
+
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <p class="fl_left">Copyright &copy; 2019 - All Rights Reserved - <a href="#">chodocu.com</a></p>

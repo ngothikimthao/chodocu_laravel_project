@@ -11,6 +11,133 @@ File: Layout CSS
 @import url("font-awesome.min.css");
 @import url("framework.css");
 
+.container_dangbai{
+
+}
+.comment_image{
+	height: 400px;
+	width: 400px;
+	float: left;
+}
+.post-content {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+.post-content {
+    position: relative;
+    z-index: 1;
+}
+.box-shadow {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15) !important;
+}
+.bg-white {
+    background-color: #ffffff !important;
+}
+.p-30 {
+    padding: 30px !important;
+}
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+.bg-white {
+    background-color: #fff!important;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.container_backimage{
+	height: 182px;
+}
+.post-area{
+	padding-left: 331px;
+}
+.post-content body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-color: #f2f4f5;
+}
+.post-content  body {
+    font-family: "Roboto", sans-serif;
+}
+ .post-content {
+  position: relative;
+  z-index: 1; }
+  .post-content label {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #1a1a1a;
+    font-weight: 500; }
+.post-content  body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+user agent stylesheet
+html {
+    color: -internal-root-color;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
@@ -107,7 +234,7 @@ File: Layout CSS
 #comments .comcont p{margin:10px 5px 10px 0; padding:0;}
 
 #comments form{display:block; width:100%;}
-#comments input, #comments textarea{width:100%; padding:10px; border:1px solid;}
+#comments input, #comments textarea{width:100%;; padding:10px; border:1px solid;}
 #comments textarea{overflow:auto;}
 #comments div{margin-bottom:15px;}
 #comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}

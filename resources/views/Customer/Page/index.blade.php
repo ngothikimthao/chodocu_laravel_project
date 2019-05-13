@@ -90,7 +90,9 @@
 <!-- Hiển thị hình ảnh được trả phí -->
 <div class="wrapper row3">
   <section class="hoc container clear"> 
-     <center> <h6 class="heading">Mặt hàng mới nhất </h6></center>
+   <div class="sectiontitle">
+      <h6 class="heading">Mặt hàng mới nhất</h6>
+    </div>
     <div class="group latest">
       <article class="one_third first">
         <figure><a href="#"><img src="natucam/images/demo/320x220.png" alt=""></a>
@@ -141,7 +143,9 @@
 <!-- Hiển thị CLB -->
 <div class="wrapper row3">
   <section class="hoc container clear"> 
-    <center> <h6 class="heading">Câu lạc bộ được từ thiện nhiều nhất</h6></center>
+    <div class="sectiontitle">
+      <h6 class="heading">Câu lạc bộ được từ thiện nhiều nhất</h6>
+    </div>
     <div class="group latest">
       <article class="one_third first">
         <figure><a href="#"><img src="natucam/images/demo/320x220.png" alt=""></a>
