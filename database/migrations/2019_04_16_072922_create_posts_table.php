@@ -17,8 +17,9 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->Biginteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
-            $table->String('content');
-            $table->integer('status');
+            $table->Biginteger('id_prod')->unsigned();
+            $table->foreign('id_prod')->references('id')->on('products');
+            $table->String('contact');
             $table->timestamps();
         });
     }
