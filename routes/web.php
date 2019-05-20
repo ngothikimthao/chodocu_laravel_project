@@ -27,7 +27,12 @@ Route::get('chitiet',[
 
 Route::get('baidang',[
 	'as'=>'baidang',
-	'uses'=>'PageController@getbaidang'
+	'uses'=>'PageController@loadCate'
+]);
+
+Route::get('baidang',[
+	'as'=>'baidang',
+	'uses'=>'PageController@insertProduct'
 ]);
 
 Route::get('doido',[

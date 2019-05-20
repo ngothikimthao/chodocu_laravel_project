@@ -13,7 +13,8 @@ class ProductsTableSeeder extends Seeder
     {
         DB::table('Products')->insert([
             ['name' => 'Iphone Xs Max 64gb Gold bản world chính hãng fpt','id_subcat' => '1','price'=>13700000000,'image' => '1.jpg','description'=>'Điện thaoij Iphone X','status' => 1],
-            ['name' => 'Sony E4 dual 2s2s chữa cháy garb','id_cat' => '1','price'=>400000,'image' => '2.jpg|3.jpg','description'=>'Sony E4 dual 2s2s chữa cháy garb','status' => 1],
+
+            ['name' => 'Sony E4 dual 2s2s chữa cháy garb','id_subcat' => '1','price'=>400000,'image' => '2.jpg|3.jpg','description'=>'Sony E4 dual 2s2s chữa cháy garb','status' => 1],
             ['name' => 'Galaxy j7 prime máy chính hãng samsung việt nam ','id_subcat' => '1','price'=>1400000,'image' => '4.jpg|5.jpg|6.jpg','description'=>'Galaxy j7 prime máy chính hãng samsung việt nam','status' => 1],
             ['name' => 'Samsung điện thoai j7 2016 ','id_subcat' => '1','price'=>1400000,'image' => '7.jpg|8.jpg','description'=>'Samsung điện thoai j7 2016','status' => 1],
             ['name' => 'Cần bán LG Q6 Trắng máy mới 99% nguyên zin','id_subcat' => '1','price'=>2000000,'image' => '9.jpg|10.jpg|11.jpg|12.jpg','description'=>'Cần bán LG Q6 Trắng máy mới 99% nguyên zin','status' => 1],
