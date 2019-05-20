@@ -31,6 +31,13 @@
                                     <input type="file" class="form-control-file" id="upload-file">
                                 </div>
                                 <div class="form-group">
+                                    <label for="upload-file">Loại sản phẩm/label>
+                                    <select name="video-catagory" class="form-control">
+                                        <option value="">Điện thoại</option>
+                                        <option value="">Email</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="upload-file">Tiều đề</label>
                                     <input type="text" class="form-control" name="">
                                 </div>
