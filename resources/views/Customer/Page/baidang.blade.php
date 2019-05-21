@@ -28,35 +28,36 @@
                             <form action="#" method="post">
                                 <div class="form-group">
                                     <label for="upload-file">Đăng ảnh</label>
-                                    <input type="file" class="form-control-file" id="upload-file">
+                                    <input type="file" name="image" class="form-control-file" id="upload-file">
                                 </div>
                                 <div class="form-group">
-                                    <label for="upload-file">Loại sản phẩm/label>
-                                    <select name="video-catagory" class="form-control">
-                                        <option value="">Điện thoại</option>
-                                        <option value="">Email</option>
+                                    <label for="upload-file">Loại sản phẩm</label>
+                                    <select name="name" class="form-control">
+                                        @foreach($name as $name)
+                                          <option value="{{$name->name}}">{{$name->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Tiều đề</label>
-                                    <input type="text" class="form-control" name="">
+                                    <input type="text" class="form-control" name="tieude">
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Nội dung</label>
-                                    <textarea name="video-description" class="form-control" cols="30" rows="10"></textarea>
+                                    <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Gía*</label>
-                                    <input type="text" class="form-control" name="">
+                                    <input type="text" class="form-control" name="price">
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Liên hệ</label>
-                                    <select name="video-catagory" class="form-control">
+                                    <select name="lienhe" class="form-control">
                                         <option value="">Điện thoại</option>
                                         <option value="">Email</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn mag-btn mt-30"><i class="fa fa-cloud-upload"></i>Đăng bài</button>
+                                <button type="submit" name="submit" class="btn mag-btn mt-30"><i class="fa fa-cloud-upload"></i>Đăng bài</button>
                             </form>
                         </div>
                     </div>
