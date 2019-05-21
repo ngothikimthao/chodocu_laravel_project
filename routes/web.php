@@ -27,7 +27,12 @@ Route::get('chitiet',[
 
 Route::get('baidang',[
 	'as'=>'baidang',
-	'uses'=>'PageController@getbaidang'
+	'uses'=>'PageController@loadCate'
+]);
+
+Route::get('baidang',[
+	'as'=>'baidang',
+	'uses'=>'PageController@insertProduct'
 ]);
 
 Route::get('doido',[
@@ -43,6 +48,12 @@ Route::get('login',[
 	'as'=>'login',			
 	'uses'=>'PageController@getlogin'			
 ]);	
+
+Route::post('login',[				
+	'as'=>'login',			
+	'uses'=>'PageController@checkLogin'			
+]);
+
 Route::get('login1',[				
 	'as'=>'login1',			
 	'uses'=>'PageController@getlogin1'			

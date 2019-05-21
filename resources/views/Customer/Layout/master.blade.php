@@ -23,5 +23,6 @@
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 @include('Customer.Layout.script') 
+
 </body>
 </html>
