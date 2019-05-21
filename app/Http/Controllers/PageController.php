@@ -35,9 +35,14 @@ class PageController extends Controller
     	return view("customer.Page.baidang");
     }
 
-   
+    public function checkLogin(Request $request){
+        $results = DB::select('select * from users where id = :id', ['id' => 1]);
+        foreach ($users as $user) {
+        echo $user->username;
+        }
+    }
 
-      public function insertProduct(){
+    public function insertProduct(){
         $product = new Product;
         $product->name = Input::get('name');
         $product->id = Input::get(2);

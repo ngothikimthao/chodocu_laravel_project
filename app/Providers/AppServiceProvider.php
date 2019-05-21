@@ -23,9 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('Customer.Page.baidang',function($view){
-          $loai_sp = ProductType::all();
-          $view->with('loai_sp',$loai_sp);
-        });
+        
     }
 }

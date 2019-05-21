@@ -48,6 +48,12 @@ Route::get('login',[
 	'as'=>'login',			
 	'uses'=>'PageController@getlogin'			
 ]);	
+
+Route::post('login',[				
+	'as'=>'login',			
+	'uses'=>'PageController@checkLogin'			
+]);
+
 Route::get('login1',[				
 	'as'=>'login1',			
 	'uses'=>'PageController@getlogin1'			
