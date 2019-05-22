@@ -34,6 +34,6 @@ class CreateClubTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clubs');
+        Schema::dropIfExists('club');
     }
 }

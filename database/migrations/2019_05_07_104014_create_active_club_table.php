@@ -16,10 +16,9 @@ class CreateActiveClubTable extends Migration
         Schema::create('active_club', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->biginteger('id_club')->unsigned();
-            $table->foreign('id_club')->references('id')->on('clubs');
+            $table->foreign('id_club')->references('id')->on('club');
             $table->String('content');
             $table->String('image');
-            
             $table->timestamps();
         });
     }

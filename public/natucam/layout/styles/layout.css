@@ -11,9 +11,14 @@ File: Layout CSS
 @import url("font-awesome.min.css");
 @import url("framework.css");
 
-.container_dangbai{
-
+.img_club{
+    width: 400px;
+    padding-left: 20px;
+    height:200px;
 }
+.container_dangbai{
+}
+
 .comment_image{
 	height: 400px;
 	width: 400px;
@@ -502,7 +507,7 @@ table a, #comments a{background-color:inherit;}
 @media screen and (max-width:900px){
 	.hoc{max-width:90%;}
 
-	#header{padding:30px 0;}
+	#header{padding:10px 0;}
 	#header #logo{margin-top:3px;}
 
 	#mainav{}
@@ -527,7 +532,10 @@ table a, #comments a{background-color:inherit;}
 	.fl_left, .fl_right{display:block; float:none;}
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
-
+    .img_club{
+    width: 250px;
+    height:250px;
+}
 	#header{text-align:center;}
 	#header #logo{margin:0 0 15px 0;}
 

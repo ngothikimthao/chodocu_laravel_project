@@ -9,6 +9,7 @@ use App\Post_Product;
 use App\Category;
 use App\Post;
 use App\sup_category;
+use App\Club;
 
 class PageController extends Controller
 {
@@ -34,8 +35,6 @@ class PageController extends Controller
     function getbaidang(){
     	return view("customer.Page.baidang");
     }
-
-   
 
       public function insertProduct(){
         $product = new Product;
@@ -79,8 +78,16 @@ class PageController extends Controller
    // }
 
     function gettuthien(){
-        return View("Customer.Page.tuthien");
+        $club = Club::select('id','username','avata')->get();
+        return View('Customer.Page.tuthien',compact('club'));
     }
+
+    public function getactivityClub(Request $req){
+        $sanpham = Club::where('id',$req->id)->first();
+        $sp_tuongtu = Club::where('id_type',$sanpham->id_type)->paginate(6);
+        return view('page.chitiet_sanpham',compact('sanpham','sp_tuongtu'));
+    }
+
     function getlogin(){
         return View("Login.login");
     }
@@ -90,5 +97,4 @@ class PageController extends Controller
     function getregister(){
         return View("Login.register");
     }
-    
 }
