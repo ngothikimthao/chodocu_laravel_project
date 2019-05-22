@@ -2,7 +2,7 @@
 @section('precontent')
 <div class="container">
 	<div class="row">
-		<form class="form-signin mg-btm" id="login" role= "form" method="POST" action="{{url('/Customer/Login/login')}}" >
+		<form class="form-signin mg-btm" method="POST" action="" >
     	<center><h3 class="heading-desc">Login </h3><center>
 		<div class="social-box">
 			<div class="row mg-btm">
@@ -47,7 +47,7 @@
 				</div>
 				<br>
 				<div class="col-xs-3 col-md-3 pull-right">
-					<button type="submit" class="btn btn-large btn-danger pull-right">Login</button>
+					<button class="btn btn-success btn-submit">Submit</button>
 				</div>
 			</div>
    		</div>

@@ -35,7 +35,7 @@
 
   $("#login").on('submit',function(e){
     e.preventDefault();
-    console.log('submit detetect!')
+    console.log('submit detetect!');
 
     $.post(
     	$(this).attr('action'),{
