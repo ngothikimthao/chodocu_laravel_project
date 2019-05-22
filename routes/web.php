@@ -51,8 +51,14 @@ Route::get('login',[
 Route::get('login1',[				
 	'as'=>'login1',			
 	'uses'=>'PageController@getlogin1'			
-]);				
-Route::get('register',[				
-	'as'=>'register',			
-	'uses'=>'PageController@getregister'			
-]);		
+]);	
+
+Route::get('register', [
+		'as' 	=> 'register',
+		'uses' 	=> 'PageController@getRegister'
+	]);
+
+Route::post('register', [
+	'as' 	=> 'postCheckRegister',
+	'uses' 	=> 'PageController@postCheckRegister'
+]);

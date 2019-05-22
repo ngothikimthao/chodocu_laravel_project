@@ -1,14 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Input;
 use App\Product;
 use App\Post_Product;
 use App\Category;
 use App\Post;
 use App\sup_category;
+
+use App\Http\Requests\UsersRequest;
+use App\User;
+
+use File;
+use Hash;
+
 
 class PageController extends Controller
 {
@@ -87,8 +96,23 @@ class PageController extends Controller
     function getlogin1(){
         return View("Login.login1");
     }
-    function getregister(){
-        return View("Login.register");
+    function getRegister() {
+        return view('Login.register');
     }
-    
+    function postCheckRegister(UsersRequest $request){
+        $user = new User();
+        $user->name = $request->txtname;
+        $user->email = $request->txtemail;
+        $user->phone = $request->txtphoneNumber;
+        $user->user_name = $request->txtuserName;
+        $user->password = Hash::make($request->txtpassword);
+        $user->address = $request->txtaddress;
+        $file_image = $request->file('txtimage')->getClientOriginalName();
+        $user->avata=$file_image;
+        $user->status = 1;
+        $request->file('txtimage')->move('public/img/user/',$file_image);
+        $user->save();
+        return redirect()->back()->with('success', 'Đăng ký tài khoản thành công!');;
+    }
+
 }

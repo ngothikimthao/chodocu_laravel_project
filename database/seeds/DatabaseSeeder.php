@@ -13,13 +13,21 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(SlideSeeder::class);
        $this->call(CategoriesTableSeeder::class);
+<<<<<<< Updated upstream
         $this->call(Sub_CategoriesTableSeeder::class);
        $this->call(UsersTableSeeder::class);
        $this->call(ProductsTableSeeder::class);
        //   $this->call(PostsTableSeeder::class);
        //  $this->call(Post_ProductTableSeeder::class);
+=======
+        $this->call(Sub_CategoriesTableSeeder ::class);
+       $this->call(UsersTableSeeder::class);
+       $this->call(ProductsTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
+        $this->call(Post_ProductTableSeeder::class);
+>>>>>>> Stashed changes
        
-       // $this->call(NewsTableSeeder::class);
-       // $this->call(CommentsTableSeeder::class);
+       $this->call(NewsTableSeeder::class);
+       $this->call(CommentsTableSeeder::class);
     }
 }
