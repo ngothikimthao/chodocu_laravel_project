@@ -8,7 +8,7 @@
       <nav class="sdb_holder">
         <ul>
           @foreach($club as $cl)
-          <li><a href="#">{{$cl->username}}</a></li>
+          <li><a href="{{route('clb',$cl->id)}}">{{$cl->username}}</a></li>
           @endforeach
         </ul>
       </nav>

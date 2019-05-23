@@ -81,6 +81,10 @@ class PageController extends Controller
         $club = Club::select('id','username','avata')->get();
         return View('Customer.Page.tuthien',compact('club'));
     }
+    function getclb($id){
+        $club = Club::where('id',$id)->first();
+        return View('Customer.Page.tuthien',compact('club'));
+    }
 
     public function getactivityClub(Request $req){
         $sanpham = Club::where('id',$req->id)->first();
