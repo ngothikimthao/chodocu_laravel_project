@@ -6,13 +6,9 @@
       <h6>Danh mục các CLB</h6>
       <nav class="sdb_holder">
         <ul>
-          <li><a href="#">CLB Hope Đà Nẵng</a></li>
-          <li><a href="#">CLB Ánh Hồng</a></li>
-          <li><a href="#">CLB Ánh Sao</a></li>
-          <li><a href="#">CLB Thiện Tâm</a></li>
-          <li><a href="#">CLB Trẻ Em Ga Sài Gòn</a></li>
-          <li><a href="#">CLB Phượng Hoàng</a></li>
-          <li><a href="#">CLB Kim Hằng</a></li>
+          @foreach($club as $cl)
+          <li><a href="{{route('clb',$cl['id'])}}">{{$cl->username}}</a></li>
+          @endforeach
         </ul>
       </nav>
     </div>
@@ -20,20 +16,11 @@
       <div class="content"> 
         <div id="gallery">
           <figure>
-            <header class="heading">Câu Lạc Bộ Hope Đà Nẵng</header>
+            <header class="heading">Câu Lạc Bộ</header>
             <ul class="nospace clear">
-              <li class="one_quarter first"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter first"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter first"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
-              <li class="one_quarter"><a href="#"><img src="natucam/images/demo/gallery/01.png" alt=""></a></li>
+              @foreach($club as $cl)
+              <li class="one_quarter "><a href="#"><img src="img/club/{{$cl->avata}}" class="imgshowPage" alt=""></a></li>
+              @endforeach
             </ul>
             <figcaption>Gallery Description Goes Here</figcaption>
           </figure>

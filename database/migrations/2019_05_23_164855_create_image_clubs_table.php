@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActiveClubTable extends Migration
+class CreateImageClubsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateActiveClubTable extends Migration
      */
     public function up()
     {
-        Schema::create('active_club', function (Blueprint $table) {
+        Schema::create('image_club', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('id_club')->unsigned();
-            $table->foreign('id_club')->references('id')->on('club');
-            $table->String('content');
-            $table->String('image');
-            
+            $table->bigInteger('id_activity');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateActiveClubTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('active_club');
+        Schema::dropIfExists('image_clubs');
     }
 }
