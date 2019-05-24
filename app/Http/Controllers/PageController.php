@@ -10,6 +10,8 @@ use App\Category;
 use App\Post;
 use App\sup_category;
 use App\Club;
+use App\Active_Club;
+use App\ImageClub;
 
 class PageController extends Controller
 {
@@ -21,22 +23,29 @@ class PageController extends Controller
     }
 
     function getdoido(){
-    	return view("customer.Page.doido");
+        return view("customer.Page.doido");
     }
 
     function getprofile(){
-    	return view("customer.Page.profile");
+        return view("customer.Page.profile");
     }
 
     function getchitiet(){
-    	return view("customer.Page.chitiet");
+        return view("customer.Page.chitiet");
     }
 
     function getbaidang(){
-    	return view("customer.Page.baidang");
+        return view("customer.Page.baidang");
     }
 
-      public function insertProduct(){
+    public function checkLogin(Request $request){
+        $results = DB::select('select * from users where id = :id', ['id' => 1]);
+        foreach ($users as $user) {
+        echo $user->username;
+        }
+    }
+
+    public function insertProduct(){
         $product = new Product;
         $product->name = Input::get('name');
         $product->id = Input::get(2);
@@ -65,33 +74,26 @@ class PageController extends Controller
 
     public function loadCate()
     {
-        $name = Category::select('id','name')->get();
-        return view('customer.Page.baidang',compact('name'));
+        
     }
-
-   // public function getLoaiSp($type) {
-      //  $sp_theoloai= Product::where('id_type',$type) ->limit(3)->get();
-        // $sp_khac= Product::where('id_type','<>',$type)->limit(3)->get();
-       // $loai = Category::all();
-       // $loai_sp = Category::where('id',$type)->first();
-       // return view('Customer.Page.baidang',compact('sp_theoloai','loai','loai_sp'));
-   // }
 
     function gettuthien(){
         $club = Club::select('id','username','avata')->get();
         return View('Customer.Page.tuthien',compact('club'));
     }
+
     function getclb($id){
-        $club = Club::where('id',$id)->first();
-        return View('Customer.Page.tuthien',compact('club'));
+        $club = Club::select('id','username','avata')->get();
+        $clubs = Active_Club::where('id_club','=',$id)->get();
+        $a = Active_Club::where('id_club','=',$id)->value('id');
+        $img = ImageClub::where('id_activity','=',$a)->get();
+
+        return View('Customer.Page.activityClub',compact('club','clubs','img'));
     }
 
-    public function getactivityClub(Request $req){
-        $sanpham = Club::where('id',$req->id)->first();
-        $sp_tuongtu = Club::where('id_type',$sanpham->id_type)->paginate(6);
-        return view('page.chitiet_sanpham',compact('sanpham','sp_tuongtu'));
+    function getloai(){
+        
     }
-
     function getlogin(){
         return View("Login.login");
     }
@@ -101,4 +103,5 @@ class PageController extends Controller
     function getregister(){
         return View("Login.register");
     }
+    
 }

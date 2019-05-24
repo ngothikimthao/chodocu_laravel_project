@@ -4,23 +4,26 @@
   <main class="hoc container clear"> 
     <div class=" sidebar one_quarter first "> 
       <h6>Danh mục các CLB</h6>
-      
       <nav class="sdb_holder">
         <ul>
           @foreach($club as $cl)
-          <li><a href="{{route('clb',$cl->id)}}">{{$cl->username}}</a></li>
+          <li><a href="{{route('clb',$cl['id'])}}">{{$cl->username}}</a></li>
           @endforeach
         </ul>
       </nav>
-      
     </div>
-   <div class="content three_quarter"> 
+   <div class=" content three_quarter  "> 
       <div class="content"> 
         <div id="gallery">
-          @foreach($club as $cl)
-            <li class="one_quarter"><a href="#"><img src="img/club/{{$cl->avata}}" alt="" class="img_club"></a>
-            </li>
-          @endforeach
+          <figure>
+            <header class="heading">Câu Lạc Bộ</header>
+            <ul class="nospace clear">
+              @foreach($club as $cl)
+              <li class="one_quarter "><a href="#"><img src="img/club/{{$cl->avata}}" class="imgshowPage" alt=""></a></li>
+              @endforeach
+            </ul>
+            <figcaption>Gallery Description Goes Here</figcaption>
+          </figure>
         </div>
         <nav class="pagination">
           <ul>
