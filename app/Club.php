@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Club extends Model
 {
-    protected $table ='club';
+    protected $table ='clubs';
     protected $filable=['name', 'email','phone', 'username','password', 'avata','address', 'status'];
     public $timestamps=true;
     //Du dung 2 truong created and updated 

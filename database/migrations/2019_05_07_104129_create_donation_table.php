@@ -20,7 +20,7 @@ class CreateDonationTable extends Migration
             $table->Biginteger('id_prod')->unsigned();
             $table->foreign('id_prod')->references('id')->on('products');
             $table->Biginteger('id_club')->unsigned();
-            $table->foreign('id_club')->references('id')->on('club');
+            $table->foreign('id_club')->references('id')->on('clubs');
             $table->String('content');
             $table->timestamps();
         });

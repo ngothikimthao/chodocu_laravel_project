@@ -11,18 +11,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      // $this->call(SlideSeeder::class);
-      $this->call(CategoriesTableSeeder::class);
-      $this->call(Sub_CategoriesTableSeeder::class);
-      $this->call(UsersTableSeeder::class);
-      $this->call(ProductsTableSeeder::class);
-      $this->call(clubSeeder::class);
-      $this->call(activitySeeder::class);
-      $this->call(ImageClubSeeder::class);
+         $this->call(SlideSeeder::class);
+       $this->call(CategoriesTableSeeder::class);
+<<<<<<< Updated upstream
+        $this->call(Sub_CategoriesTableSeeder::class);
+       $this->call(UsersTableSeeder::class);
+       $this->call(ProductsTableSeeder::class);
        //   $this->call(PostsTableSeeder::class);
        //  $this->call(Post_ProductTableSeeder::class);
+=======
+        $this->call(Sub_CategoriesTableSeeder ::class);
+       $this->call(UsersTableSeeder::class);
+       $this->call(ProductsTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
+        $this->call(Post_ProductTableSeeder::class);
+>>>>>>> Stashed changes
        
-       // $this->call(NewsTableSeeder::class);
-       // $this->call(CommentsTableSeeder::class);
+       $this->call(NewsTableSeeder::class);
+       $this->call(CommentsTableSeeder::class);
     }
 }

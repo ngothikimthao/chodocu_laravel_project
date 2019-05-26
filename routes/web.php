@@ -40,10 +40,10 @@ Route::get('doido',[
 	'uses'=>'PageController@getdoido'
 ]);
 
-// Route::get('tuthien',[				
-// 	'as'=>'tuthien',			
-// 	'uses'=>'PageController@gettuthien'			
-// 	]);	
+Route::get('tuthien',[				
+	'as'=>'tuthien',			
+	'uses'=>'PageController@gettuthien'			
+	]);	
 Route::get('login',[				
 	'as'=>'login',			
 	'uses'=>'PageController@getlogin'			
@@ -51,16 +51,14 @@ Route::get('login',[
 Route::get('login1',[				
 	'as'=>'login1',			
 	'uses'=>'PageController@getlogin1'			
-]);				
-Route::get('register',[				
-	'as'=>'register',			
-	'uses'=>'PageController@getregister'			
-]);		
-Route::get('tuthien',[
-	'as'=>'tuthien',
-	'uses'=>'PageController@gettuthien'
-]);
-Route::get('clb/{id}',[
-	'as'=>'clb',
-	'uses'=>'PageController@getclb'
+]);	
+
+Route::get('register', [
+		'as' 	=> 'register',
+		'uses' 	=> 'PageController@getRegister'
+	]);
+
+Route::post('register', [
+	'as' 	=> 'postCheckRegister',
+	'uses' 	=> 'PageController@postCheckRegister'
 ]);

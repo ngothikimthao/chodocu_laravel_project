@@ -59,7 +59,6 @@
                                 </div>
                                 <button type="submit" name="submit" class="btn mag-btn mt-30"><i class="fa fa-cloud-upload"></i>Đăng bài</button>
                             </form>
-                           
                         </div>
                     </div>
                 </div>
