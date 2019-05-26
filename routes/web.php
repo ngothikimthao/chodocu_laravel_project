@@ -63,4 +63,32 @@ Route::get('tuthien',[
 Route::get('clb/{id}',[
 	'as'=>'clb',
 	'uses'=>'PageController@getclb'
+]);	
+
+Route::get('register', [
+		'as' 	=> 'register',
+		'uses' 	=> 'PageController@getRegister'
+	]);
+
+Route::post('register', [
+	'as' 	=> 'postCheckRegister',
+	'uses' 	=> 'PageController@postCheckRegister'
+]);
+
+Route::get('register', [
+		'as' 	=> 'register',
+		'uses' 	=> 'PageController@getRegister'
+	]);
+Route::get('list', [
+		'as' 	=> 'getListProfile',
+		'uses' 	=> 'PageController@getListProfile'
+	]);
+Route::get('edit/{id}', [
+	'as' 	=> 'getEditProfile',
+	'uses' 	=> 'PageController@getEditProfile'
+	]);
+
+Route::post('edit/{id}', [
+	'as' 	=> 'postEditProfile',
+	'uses' 	=> 'PageController@postEditProfile'
 ]);

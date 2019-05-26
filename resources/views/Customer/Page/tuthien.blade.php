@@ -3,7 +3,7 @@
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <div class=" sidebar one_quarter first "> 
-      <h6>Danh mục các CLB</h6>
+      <header class="heading">Danh Muc CLB</header>
       <nav class="sdb_holder">
         <ul>
           @foreach($club as $cl)
@@ -17,30 +17,18 @@
         <div id="gallery">
           <figure>
             <header class="heading">Câu Lạc Bộ</header>
-            <ul class="nospace clear">
+            <div class="row">
               @foreach($club as $cl)
-              <li class="one_quarter "><a href="#"><img src="img/club/{{$cl->avata}}" class="imgshowPage" alt=""></a></li>
+              <div class="column imageTuthien">
+                  <h3>{{$cl->username}}</h3>
+                  <img src="img/club/{{$cl->avata}}" class="imgstyleac" alt="Image">
+                  <br><br>
+                  <a href="{{route('clb',$cl['id'])}}">>>Thêm</a>
+              </div>
               @endforeach
-            </ul>
-            <figcaption>Gallery Description Goes Here</figcaption>
+        </div>
           </figure>
         </div>
-        <nav class="pagination">
-          <ul>
-              <li><a href="#">&laquo; Previous</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><strong>&hellip;</strong></li>
-              <li><a href="#">6</a></li>
-              <li class="current"><strong>7</strong></li>
-              <li><a href="#">8</a></li>
-              <li><a href="#">9</a></li>
-              <li><strong>&hellip;</strong></li>
-              <li><a href="#">14</a></li>
-              <li><a href="#">15</a></li>
-              <li><a href="#">Next &raquo;</a></li>
-          </ul>
-        </nav>
         <div id="comments">
           <h2>Comments</h2>
           <ul>

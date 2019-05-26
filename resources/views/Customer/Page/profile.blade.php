@@ -10,7 +10,7 @@
                 <li><a href="#">Đăng bài</a></li>
                 <li><a href="#">Thông tin</a>
                   <ul>
-                    <li><a href="#">Xem thông tin</a></li>
+                    <li><a href="{{route('getListProfile')}}">Xem thông tin</a></li>
                     <li><a href="#">Cập nhật</a></li>
                   </ul>
                 </li>

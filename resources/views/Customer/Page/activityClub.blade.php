@@ -16,7 +16,8 @@
 
         @foreach($clubs as $cl)
         <div>
-          <img src="img/club/{{$cl['image']}}" class="imgbackground" alt="Image">
+          <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/club/{{$cl['image']}});">
+          <div class="centered">{{$cl->email}}</div>
         </div>
         @endforeach
         
@@ -28,28 +29,36 @@
           </div>
           @endforeach
         </div>
-        
-      <!-- <article class="sidebar one_quarter">
-      	<h6>Danh mục các CLB</h6>
-        @foreach($club as $cl)
-          <li><a href="{{route('clb',$cl['id'])}}">{{$cl->username}}</a></li>
-          @endforeach
-      </article>
-      <article class="one_third">
-        <div id="comments">
-           @foreach($img as $im)
-          <img src="{{$im['image']}}" class="img-responsive" alt="Image">
-          @endforeach
-        </div>
-      </article>
-      <article class="one_third">
-         @foreach($clubs as $cl)
-          <h1>{{$cl['content']}}</h1>
-         @endforeach
-      </article> -->
-      
+
+        <center><h1>Quyên Góp</h1></center>
+        <h2>Điền Thông Tin Sản Phẩm</h2>
+        <form action="#" method="post">
+            <div class="one_third first">
+              <label for="name">Tên Sản Phẩm<span>*</span></label>
+              <input type="text" name="name" id="name" value="" size="22" required>
+            </div>
+            <div class="one_third">
+              <label for="">Thể Loại<span>*</span></label>
+              <input type="text" name="email" id="email" value="" size="22" required>
+            </div>
+            <div class="one_third">
+              <label for="url">Liên Hệ</label>
+              <input type="url" name="url" id="url" value="" size="22">
+            </div>
+            <div class="block clear">
+              <label for="comment">Nội Dung</label>
+              <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            </div>
+            <div>
+              <input type="submit" name="submit" value="Đóng Góp">
+              &nbsp;
+            
+            </div>
+          </form>
     </div>
+
   </section>
 </div>
+
 </body>
 @endsection
