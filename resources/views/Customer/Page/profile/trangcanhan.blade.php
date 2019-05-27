@@ -7,25 +7,21 @@
       <article class="sidebar one_quarter">
         <nav class="sdb_holder">
               <ul>
-                <li><a href="#">Đăng bài</a></li>
-                <li><a href="#">Thông tin</a>
-                  <ul>
-                    <li><a href="#">Xem thông tin</a></li>
-                    <li><a href="#">Cập nhật</a></li>
-                  </ul>
-                </li>
+                <li><a href="{{route('baidang')}}">Bài đăng</a></li>
+                <li><a href="{{route('sanpham')}}">Sản phẩm trả giá</a></li>
+                <li><a href="">Thông tin cá nhân</a></li>
               </ul>
             </nav>
       </article>
       <article class="one_third">
-        <h1>
+        <h2>
           <figure class="avatar"><img src="natucam/images/demo/avatar.png" alt="">
-            <a href="" "email me">Nguyen Thi Ti</a>
+            <a href="">Nguyen Thi Ti</a>
           </figure> 
         </h1>
         <li><a href="#"><img class="comment_image" src="natucam/images/demo/gallery/01.png" alt=""></a></li>
       </article>
-      <article class="one_third">
+      {{-- <article class="one_third">
         <div id="comments">
                   <ul>
                     <li>
@@ -73,7 +69,7 @@
                 </div>
               </form>
             </div>
-      </article>
+      </article> --}}
     </div>
   </section>
 </div>

@@ -15,28 +15,41 @@ use App\ImageClub;
 
 class PageController extends Controller
 {
+
     function getmaster(){
         return View("Customer.Layout.master");
     }
     function getindex(){
-        return View("Customer.Page.index");
+        $slide = slide::all();
+        $new_product =  DB::table('products')->where('status', 1)->limit(3)->get();
+
+        return View("Customer.Page.index",compact('slide','new_product'));
     }
 
     function getdoido(){
-        return view("customer.Page.doido");
+        $prod_type= DB::table('products')
+        ->join('sub_categories', 'sub_categories.id', '=', 'products.id_subcat')
+        ->join('categories', 'categories.id', '=', 'sub_categories.id_cat')
+        ->get(array(
+            'products.id',
+            'products.name',
+            'products.price',
+            'products.image',
+            'products.id_subcat',
+            'products.description',
+            'sub_categories.id_cat',
+            'categories.name_cat'
+        ));
+    	return view("customer.Page.doido",compact('prod_type'));
     }
 
-    function getprofile(){
-        return view("customer.Page.profile");
-    }
+    function getchitiet($id){	
+        //lay ma san pham 						
+        $sp_chitiet =  DB::table('products')->where('id', $id)->get();									
+       // $sp_chitiet= Product::where('id',$id)->get();		
+    	return view("customer.Page.chitiet",compact('sp_chitiet'));								
+    }	
 
-    function getchitiet(){
-        return view("customer.Page.chitiet");
-    }
-
-    function getbaidang(){
-        return view("customer.Page.baidang");
-    }
 
     public function checkLogin(Request $request){
         $results = DB::select('select * from users where id = :id', ['id' => 1]);
@@ -70,13 +83,6 @@ class PageController extends Controller
         return Redirect::back();
     }
 
-
-
-    public function loadCate()
-    {
-        
-    }
-
     function gettuthien(){
         $club = Club::select('id','username','avata')->get();
         return View('Customer.Page.tuthien',compact('club'));
@@ -91,9 +97,6 @@ class PageController extends Controller
         return View('Customer.Page.activityClub',compact('club','clubs','img'));
     }
 
-    function getloai(){
-        
-    }
     function getlogin(){
         return View("Login.login");
     }

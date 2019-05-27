@@ -10,40 +10,45 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-			
-Route::get('index',[				
-	'as'=>'index',			
-	'uses'=>'PageController@getindex'			
-	]);			
-Route::get('profile',[
-	'as'=>'profile',
-	'uses'=>'PageController@getprofile'
-]);
+// route trang chinh
+Route::group(['prefix' => '/'], function () {		
+	Route::get('index',[				
+		'as'=>'index',			
+		'uses'=>'PageController@getindex'			
+		]);			
+	Route::get('chitiet/{id}',[
+		'as'=>'chitiet',
+		'uses'=>'PageController@getchitiet'
+	]);
+	Route::get('baidang',[
+		'as'=>'baidang',
+		'uses'=>'PageController@getbaidang'
+	]);
+	Route::get('doido',[
+		'as'=>'doido',
+		'uses'=>'PageController@getdoido'
+	]);
+});
+//Route trang ca nhan
+Route::group(['prefix' => '/'], function () {
+	Route::get('viewprofile', [
+		'as' 	=> 'viewprofile',
+		'uses' 	=> 'ProfileController@getviewprofile'
+	]);
+	Route::get('trangcanhan/{id}', [
+		'as' 	=> 'trangcanhan',
+		'uses' 	=> 'ProfileController@gettrangcanhan'
+	]);
+	Route::get('baidang1', [
+		'as' 	=> 'baidang1',
+		'uses' 	=> 'ProfileController@getbaidang1'
+	]);
+	Route::get('sanpham', [
+		'as' 	=> 'sanpham',
+		'uses' 	=> 'ProfileController@getsanpham'
+	]);
+});
 
-Route::get('chitiet',[
-	'as'=>'chitiet',
-	'uses'=>'PageController@getchitiet'
-]);
-
-Route::get('baidang',[
-	'as'=>'baidang',
-	'uses'=>'PageController@loadCate'
-]);
-
-Route::get('baidang',[
-	'as'=>'baidang',
-	'uses'=>'PageController@insertProduct'
-]);
-
-Route::get('doido',[
-	'as'=>'doido',
-	'uses'=>'PageController@getdoido'
-]);
-
-// Route::get('tuthien',[				
-// 	'as'=>'tuthien',			
-// 	'uses'=>'PageController@gettuthien'			
-// 	]);	
 Route::get('login',[				
 	'as'=>'login',			
 	'uses'=>'PageController@getlogin'			
